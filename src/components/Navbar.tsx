@@ -23,8 +23,8 @@ export function Navbar({ activeSection }: NavbarProps) {
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Hackathons', href: '#hackathons' },
-    { label: 'Journey', href: '#journey' },
+    { label: 'Hackathons & Ideathons', href: '#hackathons' },
+    { label: 'Learning Journey', href: '#journey' },
     { label: 'Contact', href: '#contact' },
   ];
 

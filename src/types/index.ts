@@ -1,49 +1,37 @@
 export interface Project {
   id: string;
   title: string;
-  category: 'genai' | 'python' | 'web';
-  categoryLabel: string;
-  shortDescription: string;
-  fullDescription: string;
-  problemSolved: string;
-  keyFeatures: string[];
-  techStack: string[];
-  whatILearned: string;
-  status: 'Completed' | 'In Progress' | 'Prototype';
+  projectType: string;
+  description: string;
+  keyConcepts: string[];
+  techTags: string[];
   githubUrl: string;
   demoUrl?: string;
-  image?: string;
+  demoType?: 'interactive' | 'link';
+}
+
+export interface SkillItem {
+  name: string;
+  status: 'Beginner' | 'Learning' | 'Exploring';
 }
 
 export interface SkillCategory {
-  id: string;
   title: string;
-  description: string;
-  skills: {
-    name: string;
-    level: string; // e.g. "Proficient in Basics", "Active Learning & Building", "Conceptual & Exploring"
-    context: string;
-  }[];
+  skills: SkillItem[];
 }
 
-export interface HackathonExperience {
+export interface HackathonEntry {
   id: string;
-  title: string;
-  event: string;
-  date: string;
+  eventName: string;
   role: string;
-  achievement: string;
-  description: string;
-  takeaways: string[];
-  projectTitle: string;
-  techUsed: string[];
+  whatIExplored: string;
+  whatILearned: string;
+  isPlaceholder?: boolean;
 }
 
-export interface TimelineMilestone {
-  period: string;
-  phase: string;
+export interface JourneyStage {
+  stageNumber: string;
   title: string;
   description: string;
-  focusPoints: string[];
-  status: 'Completed' | 'Current Focus' | 'Upcoming';
+  status: 'Completed' | 'In Progress' | 'Future Goal';
 }

@@ -11,6 +11,8 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Hackathons } from './components/Hackathons';
 import { LearningJourney } from './components/LearningJourney';
+import { CurrentFocus } from './components/CurrentFocus';
+import { FutureGoals } from './components/FutureGoals';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
@@ -40,7 +42,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-slate-800 selection:text-white">
-      {/* Sticky Navigation */}
+      {/* Sticky Navigation Bar */}
       <Navbar activeSection={activeSection} />
 
       {/* Main Content Sections */}
@@ -51,6 +53,8 @@ export default function App() {
         <Projects />
         <Hackathons />
         <LearningJourney />
+        <CurrentFocus />
+        <FutureGoals />
         <Contact />
       </main>
 
